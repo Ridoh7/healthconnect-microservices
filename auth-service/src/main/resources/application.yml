@@ -8,7 +8,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/healthconnect_auth
     username: root
-    password: Allah-110292$$
+    password:
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
