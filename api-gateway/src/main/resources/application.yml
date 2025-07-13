@@ -1,0 +1,33 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+
+  cloud:
+    gateway:
+      server:
+        webflux:
+          discovery:
+            locator:
+              enabled: true
+              lower-case-service-id: true
+          routes:
+            - id: patient-service
+              uri: lb://patient-service
+              predicates:
+                - Path=/api/patient/**
+            - id: doctor-service
+              uri: lb://DOCTOR-SERVICE
+              predicates:
+                - Path=/api/doctor/**
+
+      default-filters:
+        - AddRequestHeader=Authorization, #{token}
+
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    reactor.netty: DEBUG
