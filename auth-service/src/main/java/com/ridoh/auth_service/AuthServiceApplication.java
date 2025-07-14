@@ -23,8 +23,8 @@ public class AuthServiceApplication {
 		return args -> {
 			if (userRepository.findByUsername("admin").isEmpty()) {
 				User admin = new User();
-				admin.setUsername("admin");
-				admin.setPassword(passwordEncoder.encode("admin123"));
+				admin.setUsername("");
+				admin.setPassword(passwordEncoder.encode(""));
 				admin.setRole(Role.ADMIN);
 				userRepository.save(admin);
 				System.out.println("✅ Admin user created");
@@ -32,8 +32,8 @@ public class AuthServiceApplication {
 
 			if (userRepository.findByUsername("gateway").isEmpty()) {
 				User gateway = new User();
-				gateway.setUsername("gateway");
-				gateway.setPassword(passwordEncoder.encode("gateway123"));
+				gateway.setUsername("");
+				gateway.setPassword(passwordEncoder.encode(""));
 				gateway.setRole(Role.GATEWAY);
 				userRepository.save(gateway);
 				System.out.println("✅ Gateway user created");
