@@ -76,3 +76,45 @@ You should see the configuration pulled from the Git repo for the `doctor-servic
 Once configured:
 - All services automatically pull their configs.
 - Changing values in the Git repo allows config refresh without redeploying services (when combined with Spring Cloud Bus).
+
+---
+
+### 📌 What does this mean?
+
+> **"Changing values in the Git repo allows config refresh without redeploying services (when combined with Spring Cloud Bus)."**
+
+This means that:
+
+- Your **config-server** is connected to a central **Git-based configuration repository** (like `healthconnect-config-repo`).
+- When you make changes to configuration files in that Git repo — for example:
+  ```yaml
+  # doctor-service.yml
+  custom:
+    feature-enabled: true
+  ```
+  — those new values are stored in the Git repo.
+
+---
+
+### 🧠 Normally (Without Spring Cloud Bus):
+
+- After making that change, your services **won't know about it immediately**.
+- You’d have to **restart each service manually** or call `/actuator/refresh` on each service individually to reload the config.
+
+---
+
+### 🚀 But *With* Spring Cloud Bus:
+
+- When you call `/actuator/busrefresh` on **any one** service (e.g., doctor-service):
+  ```bash
+  POST http://localhost:8083/actuator/busrefresh
+  ```
+- The Spring Cloud Bus uses **RabbitMQ or Kafka** to broadcast a message to all other services.
+- Each service then re-fetches its updated configuration from the config-server automatically.
+
+✅ **No redeployment or manual restart is needed.**
+
+---
+
+### 🔁 So in short:
+> Updating config values in Git → trigger a refresh → all services reload configs live → no restart needed (if Spring Cloud Bus is set up)
