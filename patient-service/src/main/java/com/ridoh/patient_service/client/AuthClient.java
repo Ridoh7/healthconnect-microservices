@@ -1,4 +1,5 @@
-package com.ridoh.doctor_service.client;
+package com.ridoh.patient_service.client;
+
 
 import com.ridoh.common.dto.TokenValidationRequest;
 import com.ridoh.common.dto.TokenValidationResponse;
@@ -16,4 +17,3 @@ public interface AuthClient {
     @PostMapping("/api/auth/token/verify")
     TokenValidationResponse validateToken(@RequestBody TokenValidationRequest request);
 }
-

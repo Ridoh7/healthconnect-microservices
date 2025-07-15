@@ -22,6 +22,10 @@ spring:
               uri: lb://DOCTOR-SERVICE
               predicates:
                 - Path=/api/doctor/**
+            - id: auth-service
+              uri: lb://AUTH-SERVICE
+              predicates:
+                - Path=/api/auth/**
 
       default-filters:
         - AddRequestHeader=Authorization, #{token}

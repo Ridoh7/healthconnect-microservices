@@ -2,12 +2,12 @@ package com.ridoh.auth_service.controller;
 
 import com.ridoh.auth_service.DTOs.AuthRequest;
 import com.ridoh.auth_service.DTOs.AuthResponse;
-import com.ridoh.auth_service.DTOs.TokenValidationRequest;
-import com.ridoh.auth_service.DTOs.TokenValidationResponse;
-import com.ridoh.auth_service.model.Role;
 import com.ridoh.auth_service.model.User;
 import com.ridoh.auth_service.service.AuthService;
 import com.ridoh.auth_service.service.JwtService;
+import com.ridoh.common.dto.TokenValidationRequest;
+import com.ridoh.common.dto.TokenValidationResponse;
+import com.ridoh.common.model.Role;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;

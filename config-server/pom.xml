@@ -48,6 +48,11 @@
 			<version>5.3.1</version>
 		</dependency>
 		<dependency>
+			<groupId>com.ridoh</groupId>
+			<artifactId>common-lib</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>1.18.38</version>

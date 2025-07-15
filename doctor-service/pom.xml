@@ -42,7 +42,11 @@
 			<artifactId>auth-service</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-
+		<dependency>
+			<groupId>com.ridoh</groupId>
+			<artifactId>common-lib</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 
 		<!-- Validation -->
 		<dependency>
@@ -128,13 +132,12 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>${spring-cloud.version}</version>
+				<version>2023.0.1</version> <!-- Or match your Spring Boot version -->
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-
 	<build>
 		<plugins>
 			<!-- Compiler Plugin with MapStruct + Lombok binding -->

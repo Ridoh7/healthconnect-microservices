@@ -2,10 +2,10 @@ package com.ridoh.auth_service.service;
 
 import com.ridoh.auth_service.DTOs.AuthRequest;
 import com.ridoh.auth_service.DTOs.AuthResponse;
-import com.ridoh.auth_service.DTOs.TokenValidationRequest;
-import com.ridoh.auth_service.DTOs.TokenValidationResponse;
 import com.ridoh.auth_service.model.User;
 import com.ridoh.auth_service.repository.UserRepository;
+import com.ridoh.common.dto.TokenValidationRequest;
+import com.ridoh.common.dto.TokenValidationResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

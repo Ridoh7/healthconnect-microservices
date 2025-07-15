@@ -1,8 +1,8 @@
 package com.ridoh.auth_service;
 
-import com.ridoh.auth_service.model.Role;
 import com.ridoh.auth_service.model.User;
 import com.ridoh.auth_service.repository.UserRepository;
+import com.ridoh.common.model.Role;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

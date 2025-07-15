@@ -1,5 +1,6 @@
 package com.ridoh.auth_service.model;
 
+import com.ridoh.common.model.Role;
 import jakarta.persistence.*;
 import lombok.*;
 

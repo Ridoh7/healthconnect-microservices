@@ -1,18 +1,15 @@
-package com.ridoh.auth_service.DTOs;
+package com.ridoh.common.dto;
 
-import com.ridoh.auth_service.model.Role;
+import com.ridoh.common.model.Role;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class TokenValidationResponse {
     private boolean valid;
     private String username;
     private Role role;
-
 }

@@ -1,7 +1,7 @@
-package com.ridoh.doctor_service.security;
+package com.ridoh.patient_service.security;
 
 import com.ridoh.common.dto.TokenValidationRequest;
-import com.ridoh.doctor_service.client.AuthClient;
+import com.ridoh.patient_service.client.AuthClient;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
